@@ -108,10 +108,10 @@ class Annotator:
         offset = max(10.0, min(width, height) * 0.02)
 
         self._draw_direction_arrow(
-            frame, first, second, normal, 0.34, +1, line.positive_direction, POSITIVE_COLOR, offset
+            frame, first, second, normal, 0.68, +1, line.positive_direction, POSITIVE_COLOR, offset
         )
         self._draw_direction_arrow(
-            frame, first, second, normal, 0.68, -1, line.negative_direction, NEGATIVE_COLOR, offset
+            frame, first, second, normal, 0.34, -1, line.negative_direction, NEGATIVE_COLOR, offset
         )
 
         mid = ((p1[0] + p2[0]) // 2, (p1[1] + p2[1]) // 2)
