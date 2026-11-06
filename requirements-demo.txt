@@ -1,0 +1,5 @@
+# Minimal requirements for the offline synthetic demo (no YOLO / PyTorch).
+opencv-python>=4.9.0
+numpy>=1.24
+pandas>=2.0
+PyYAML>=6.0

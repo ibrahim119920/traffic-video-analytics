@@ -1,0 +1,42 @@
+# Intelligent Traffic & Video Analytics - runtime configuration
+# All line coordinates are normalized (0.0 - 1.0) so they work at any resolution.
+
+camera_id: camera_01
+
+model:
+  weights: yolo11n.pt          # pretrained Ultralytics checkpoint (auto-downloaded on first run)
+  device: cpu                  # "cpu" or "0" for the first CUDA GPU
+  imgsz: 640                   # inference size; lower = faster on CPU
+  conf: 0.35                   # detection confidence threshold
+  iou: 0.50                    # NMS IoU threshold
+  tracker: bytetrack.yaml      # ships with Ultralytics
+  classes: [2, 3, 5, 7]        # COCO: car, motorcycle, bus, truck
+
+video:
+  path: data/raw/traffic.mp4
+  frame_stride: 2              # process every Nth frame (2 = ~half the compute)
+  max_frames: null             # optional cap on source frames read
+  output_fps: null             # null = source_fps / frame_stride
+
+lines:
+  - name: main_line
+    start: [0.15, 0.55]        # x, y in normalized frame coordinates
+    end: [0.85, 0.55]
+    # A horizontal line drawn left-to-right: the "positive" side is below the line.
+    positive_direction: southbound
+    negative_direction: northbound
+
+counting:
+  base_timestamp: ""           # "" = use the run start time; set ISO-8601 for reproducible data
+  min_confidence: 0.30
+  count_reentries: false       # true = a track may be counted every time it crosses
+  max_track_age_frames: 90     # drop track history after this many frames without an update
+
+analytics:
+  interval_seconds: 300        # time bucket for the traffic summary (5 minutes)
+
+output:
+  dir: output
+  video: null                  # null = output/videos/<run_id>_annotated.mp4
+  events: null                 # null = output/events/<run_id>.jsonl
+  reports_dir: null            # null = output/reports/<run_id>

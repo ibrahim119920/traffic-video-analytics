@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "camera_id": "demo_camera_01",
+  "generated_at": "2026-11-06T00:58:42",
+  "time_range": {
+    "start": "2026-11-06T08:00:00",
+    "end": "2026-11-06T08:00:29"
+  },
+  "interval_seconds": 10,
+  "total_events": 47,
+  "by_class": {
+    "car": 30,
+    "motorcycle": 9,
+    "truck": 6,
+    "bus": 2
+  },
+  "by_direction": {
+    "southbound": 24,
+    "northbound": 23
+  },
+  "by_line": {
+    "demo_line": 47
+  },
+  "by_class_direction": [
+    {
+      "object_class": "car",
+      "direction": "northbound",
+      "count": 16
+    },
+    {
+      "object_class": "car",
+      "direction": "southbound",
+      "count": 14
+    },
+    {
+      "object_class": "motorcycle",
+      "direction": "southbound",
+      "count": 7
+    },
+    {
+      "object_class": "truck",
+      "direction": "northbound",
+      "count": 4
+    },
+    {
+      "object_class": "motorcycle",
+      "direction": "northbound",
+      "count": 2
+    },
+    {
+      "object_class": "truck",
+      "direction": "southbound",
+      "count": 2
+    },
+    {
+      "object_class": "bus",
+      "direction": "northbound",
+      "count": 1
+    },
+    {
+      "object_class": "bus",
+      "direction": "southbound",
+      "count": 1
+    }
+  ],
+  "peak_interval": {
+    "interval_start": "2026-11-06T08:00:10",
+    "interval_end": "2026-11-06T08:00:20",
+    "count": 18,
+    "by_class": {
+      "car": 12,
+      "motorcycle": 3,
+      "truck": 3
+    },
+    "by_direction": {
+      "northbound": 9,
+      "southbound": 9
+    }
+  },
+  "intervals": [
+    {
+      "interval_start": "2026-11-06T08:00:00",
+      "interval_end": "2026-11-06T08:00:10",
+      "count": 15,
+      "by_class": {
+        "car": 9,
+        "motorcycle": 3,
+        "bus": 2,
+        "truck": 1
+      },
+      "by_direction": {
+        "southbound": 8,
+        "northbound": 7
+      }
+    },
+    {
+      "interval_start": "2026-11-06T08:00:10",
+      "interval_end": "2026-11-06T08:00:20",
+      "count": 18,
+      "by_class": {
+        "car": 12,
+        "motorcycle": 3,
+        "truck": 3
+      },
+      "by_direction": {
+        "northbound": 9,
+        "southbound": 9
+      }
+    },
+    {
+      "interval_start": "2026-11-06T08:00:20",
+      "interval_end": "2026-11-06T08:00:30",
+      "count": 14,
+      "by_class": {
+        "car": 9,
+        "motorcycle": 3,
+        "truck": 2
+      },
+      "by_direction": {
+        "northbound": 7,
+        "southbound": 7
+      }
+    }
+  ],
+  "run": {
+    "run_id": "demo_run",
+    "source_video": "docs\\sample_output\\input\\demo_input.mp4",
+    "detector": "synthetic-manifest",
+    "frames_read": 750,
+    "frames_processed": 750,
+    "frame_stride": 1,
+    "source_fps": 25.0,
+    "output_fps": 25.0,
+    "duration_s": 30.0,
+    "processing_seconds": 13.599,
+    "processing_fps": 55.15,
+    "base_timestamp": "2026-11-06T08:00:00"
+  }
+}

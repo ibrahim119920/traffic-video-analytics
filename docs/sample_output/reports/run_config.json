@@ -1,0 +1,53 @@
+{
+  "camera_id": "demo_camera_01",
+  "model": {
+    "weights": "yolo11n.pt",
+    "device": "cpu",
+    "imgsz": 640,
+    "conf": 0.35,
+    "iou": 0.5,
+    "tracker": "bytetrack.yaml",
+    "classes": [
+      2,
+      3,
+      5,
+      7
+    ]
+  },
+  "video": {
+    "path": "docs\\sample_output\\input\\demo_input.mp4",
+    "frame_stride": 1,
+    "max_frames": null,
+    "output_fps": null
+  },
+  "lines": [
+    {
+      "name": "demo_line",
+      "start": [
+        0.16,
+        0.58
+      ],
+      "end": [
+        0.84,
+        0.58
+      ],
+      "positive_direction": "southbound",
+      "negative_direction": "northbound"
+    }
+  ],
+  "counting": {
+    "base_timestamp": "2026-11-06T08:00:00",
+    "min_confidence": 0.3,
+    "count_reentries": false,
+    "max_track_age_frames": 120
+  },
+  "analytics": {
+    "interval_seconds": 10
+  },
+  "output": {
+    "dir": "docs\\sample_output",
+    "video": null,
+    "events": null,
+    "reports_dir": null
+  }
+}

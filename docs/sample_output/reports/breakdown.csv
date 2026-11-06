@@ -1,0 +1,9 @@
+object_class,direction,count
+car,northbound,16
+car,southbound,14
+motorcycle,southbound,7
+truck,northbound,4
+motorcycle,northbound,2
+truck,southbound,2
+bus,northbound,1
+bus,southbound,1
